@@ -2,9 +2,9 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 
-import LoginScreen from '../FirstProject/Screen/LoginScreen';
-import RegisterScreen from '../FirstProject/Screen/RegisterScreen';
-import Home from '../FirstProject/Screen/drawerScreens/Home';
+import LoginScreen from './Screen/LoginScreen';
+import RegisterScreen from './Screen/RegisterScreen';
+import Home from './Screen/drawerScreens/Home';
 import Details from './Screen/drawerScreens/Details';
 import ForgetPassword from './Screen/ForgetPassword';
 

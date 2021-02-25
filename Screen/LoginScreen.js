@@ -42,6 +42,7 @@ export default class LoginScreen extends React.Component {
             style={StyleSheets.inputText}
             placeholder="Enter username"
             placeholderTextColor="#003f5c"
+            value={email}
             onChangeText={(text) => this.setState({email: text})}
           />
         </View>
@@ -50,6 +51,7 @@ export default class LoginScreen extends React.Component {
             style={StyleSheets.inputText}
             placeholder="Enter password"
             placeholderTextColor="#003f5c"
+            value={password}
             onChangeText={(text) => this.setState({password: text})}
           />
         </View>

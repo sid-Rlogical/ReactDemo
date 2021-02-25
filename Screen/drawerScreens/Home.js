@@ -1,6 +1,7 @@
 import * as React from 'react';
 import {View, StyleSheet, FlatList, ActivityIndicator} from 'react-native';
 import {ListItem, SearchBar} from 'react-native-elements';
+
 //import {createStackNavigator} from '@react-navigation/stack';
 //import {NavigationContainer} from '@react-navigation/native';
 
@@ -80,7 +81,7 @@ export default class Home extends React.Component {
           showAccessory: false,
           height: 50,
           width: 50,
-          borderRadius: 50 / 2,
+          borderRadius: 25,
           borderColor: '#000000',
           borderWidth: 2,
         }}
@@ -170,16 +171,16 @@ const StyleSheets = StyleSheet.create({
   image: {
     width: 150,
     height: 150,
-    borderRadius: 50,
-    overflow: 'hidden',
-    borderWidth: 3,
-    borderColor: 'red',
+    borderRadius: 75,
+    //overflow: 'hidden',
+    //borderWidth: 3,
+    //borderColor: 'red',
   },
 
   separatorStyle: {
-    height: 1,
+    height: 0,
     width: '86%',
-    backgroundColor: '#CED0CE',
+    backgroundColor: '#FFFFFF',
     marginLeft: '20%',
   },
   FooterStyle: {
@@ -189,5 +190,15 @@ const StyleSheets = StyleSheet.create({
   },
   SearchBarStyle: {
     backgroundColor: '#003f5c',
+  },
+  listItem: {
+    margin: 10,
+    padding: 10,
+    backgroundColor: '#FFFFFF',
+    width: '80%',
+    flex: 1,
+    alignSelf: 'center',
+    flexDirection: 'row',
+    borderRadius: 5,
   },
 });
