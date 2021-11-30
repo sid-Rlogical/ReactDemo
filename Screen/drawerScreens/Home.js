@@ -15,6 +15,7 @@ export default class Home extends React.Component {
       seed: 1,
       error: null,
       refreshing: false,
+      search: '',
     };
   }
 
@@ -45,6 +46,8 @@ export default class Home extends React.Component {
         lightTheme
         round
         containerStyle={{backgroundColor: '#FFFFFF'}}
+        onChangeText={(text) => this.setState({search: text})}
+        value={this.state.search}
       />
     );
   };

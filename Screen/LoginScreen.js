@@ -12,13 +12,13 @@ export default class LoginScreen extends React.Component {
   constructor() {
     super();
     this.state = {
-      email: '',
+      userName: '',
       password: '',
       isLoading: false,
     };
   }
   userLogin = () => {
-    if (this.state.email === '' && this.state.password === '') {
+    if (this.state.userName === '' && this.state.password === '') {
       Alert.alert('Enter the sign in details!');
     } else {
       this.state({
@@ -42,8 +42,8 @@ export default class LoginScreen extends React.Component {
             style={StyleSheets.inputText}
             placeholder="Enter username"
             placeholderTextColor="#003f5c"
+            onChangeText={(text) => this.setState({userName: text})}
             value={email}
-            onChangeText={(text) => this.setState({email: text})}
           />
         </View>
         <View style={StyleSheets.inputView}>
@@ -51,8 +51,8 @@ export default class LoginScreen extends React.Component {
             style={StyleSheets.inputText}
             placeholder="Enter password"
             placeholderTextColor="#003f5c"
-            value={password}
             onChangeText={(text) => this.setState({password: text})}
+            value={password}
           />
         </View>
         <TouchableOpacity>
@@ -81,54 +81,6 @@ export default class LoginScreen extends React.Component {
   }
 }
 
-/*const StyleSheets = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#003f5c',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginTop: 0,
-  },
-  logo: {
-    fontWeight: 'bold',
-    fontSize: 50,
-    color: '#fb5b5a',
-    marginBottom: 40,
-  },
-  inputView: {
-    width: 250,
-    backgroundColor: '#465881',
-    borderRadius: 25,
-    height: 50,
-    marginBottom: 20,
-    justifyContent: 'center',
-    padding: 20,
-  },
-  inputText: {
-    height: 50,
-    color: 'white',
-  },
-  forgot: {
-    color: 'white',
-    fontSize: 11,
-  },
-  loginBtn: {
-    width: 250,
-    backgroundColor: '#fb5b5a',
-    borderRadius: 25,
-    height: 50,
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: 20,
-  },
-  loginText: {
-    color: 'white',
-  },
-  forgotStyle: {
-    color: 'white',
-    fontSize: 11,
-  },
-});*/
 const StyleSheets = StyleSheet.create({
   container: {
     flex: 1,
